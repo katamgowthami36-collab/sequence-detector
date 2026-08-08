@@ -1,0 +1,9 @@
+iverilog -o sequence_detector_sim src/sequence_detector.v testbench/tb_sequence_detector.v
+vvp sequence_detector_sim
+initial begin
+    $dumpfile("sequence_detector.vcd");
+    $dumpvars(0, tb_sequence_detector);
+end
+clk       : _|‾|_|‾|_|‾|_|‾|_
+din       :  1   0   1   1
+detected  :              1
